@@ -40,6 +40,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<RoleRepo>();
 builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<UserRepo>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<AllowAccessRepo>();
+builder.Services.AddScoped<IAllowAccessService, AllowAccessService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

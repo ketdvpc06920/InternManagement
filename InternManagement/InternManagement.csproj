@@ -19,11 +19,4 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\Responses\" />
-    <Folder Include="DTOs\Requests\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\Interfaces\" />
-  </ItemGroup>
-
 </Project>

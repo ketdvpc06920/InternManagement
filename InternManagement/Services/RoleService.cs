@@ -44,9 +44,9 @@ namespace InternManagement.Services
 
         public ApiResponse<RoleResponse> GetRoleById(long id)
         {
-            var themes = _repository.GetRoleById(id);
-            return themes != null
-                ? ApiResponse<RoleResponse>.Success(_mapper.Map<RoleResponse>(themes))
+            var roles = _repository.GetRoleById(id);
+            return roles != null
+                ? ApiResponse<RoleResponse>.Success(_mapper.Map<RoleResponse>(roles))
                 : ApiResponse<RoleResponse>.NotFound($"Không tìm thấy vai trò #{id}");
         }
 
