@@ -1,10 +1,12 @@
 ﻿using InternManagement.DTOs.Requests;
 using InternManagement.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InternManagement.Controllers
 {
-        [ApiController]
+    [Authorize]
+    [ApiController]
         [Route("api/allow-access")]
         public class AllowAccessController : ControllerBase
         {

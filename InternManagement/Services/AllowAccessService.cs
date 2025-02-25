@@ -21,11 +21,11 @@ namespace InternManagement.Services
         }
         public ApiResponse<AllowAccessResponse> CreateAllowAccess(AllowAccessRequest allowAccessRequest)
         {
-            var existing = _repository.GetAllowAccesss().FirstOrDefault(us => us.TableName?.ToLower() == allowAccessRequest.TableName.ToLower());
-            if (existing != null)
-            {
-                return ApiResponse<AllowAccessResponse>.Conflict("Tên bảng đã tồn tại");
-            }
+            //var existing = _repository.GetAllowAccesss().FirstOrDefault(us => us.TableName?.ToLower() == allowAccessRequest.TableName.ToLower());
+            //if (existing != null)
+            //{
+            //    return ApiResponse<AllowAccessResponse>.Conflict("Tên bảng đã tồn tại");
+            //}
 
             var roleExists = _RoleRepository.GetRoles()
             .Any(m => m.RoleId == allowAccessRequest.RoleId);
@@ -97,11 +97,11 @@ namespace InternManagement.Services
                 return ApiResponse<AllowAccessResponse>.NotFound("Không tìm thấy quyền truy cập.");
             }
 
-            var existing = _repository.GetAllowAccesss().FirstOrDefault(us => us.TableName?.ToLower() == allowAccessRequest.TableName.ToLower());
-            if (existing != null)
-            {
-                return ApiResponse<AllowAccessResponse>.Conflict("Tên bảng đã tồn tại");
-            }
+            //var existing = _repository.GetAllowAccesss().FirstOrDefault(us => us.TableName?.ToLower() == allowAccessRequest.TableName.ToLower());
+            //if (existing != null)
+            //{
+            //    return ApiResponse<AllowAccessResponse>.Conflict("Tên bảng đã tồn tại");
+            //}
 
             existingAllowAcces.TableName = allowAccessRequest.TableName;
             existingAllowAcces.AccessProperties = allowAccessRequest.AccessProperties;

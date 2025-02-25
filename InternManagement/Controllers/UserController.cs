@@ -1,9 +1,11 @@
 ﻿using InternManagement.DTOs.Requests;
 using InternManagement.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InternManagement.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/users")]
     public class UserController : ControllerBase
