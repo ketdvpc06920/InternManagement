@@ -30,7 +30,7 @@ namespace InternManagement.Controllers
                 return Unauthorized(new { message = "Sai tên đăng nhập hoặc mật khẩu!" });
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("my_secure_secret_key_32_chars123"); 
+            var key = Encoding.ASCII.GetBytes("xY4xNMEg9mIovHfPqYZMOg=="); 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]

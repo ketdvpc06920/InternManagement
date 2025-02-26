@@ -87,7 +87,7 @@ namespace InternManagement.Services
                 .FirstOrDefault(us => us.RoleId != id && us.RoleName?.ToLower() == roleRequest.RoleName.ToLower());
             if (existing != null)
             {
-                return ApiResponse<RoleResponse>.Conflict("Tên chủ đề đã tồn tại");
+                return ApiResponse<RoleResponse>.Conflict("Tên vai trò đã tồn tại");
             }
 
             existingRole.RoleName = roleRequest.RoleName;
